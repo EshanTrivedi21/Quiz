@@ -18,22 +18,23 @@
 
 <body>
 
-    <div class="start-btn hidden">
+    <div class="start-btn">
         <button>Start Quiz</button>
     </div>
 
-    <div class="info-box">
+    <div class="info-box hidden">
 
         <div class="info-title">
             <span>Rules of this Quiz</span>
         </div>
 
         <div class="info-list">
-            <div class="info">1. You will get only 15 seconds per Question</div>
-            <div class="info">2. Once you select the Answer, You can't reselect them</div>
-            <div class="info">3. You can't select any Option once time goes off</div>
-            <div class="info">4. You can't exit the Quiz while Playing</div>
-            <div class="info">5. You'll get points on the basis of your Correct Answers</div>
+            <div class="info">1. You will get a total of 10 Questions</div>
+            <div class="info">2. The Questions will be General Knowledge Based</div>
+            <div class="info">3. You will get only 15 seconds per Question</div>
+            <div class="info">4. Once you select the Answer, You can't reselect them</div>
+            <div class="info">5. You can't select any Option once time goes off</div>
+            <div class="info">6. You'll get 1 Point for every Correct Answer</div>
         </div>
 
         <div class="buttons">
@@ -42,6 +43,76 @@
         </div>
 
     </div>
+
+    <div class="quiz-box hidden">
+
+        <header>
+
+            <div class="title">The Quiz.</div>
+            <div class="timer">
+                <span> Time Left : <span> &nbsp; 15 s &nbsp;</span> </span>
+            </div>
+            
+        </header>
+
+        <section>
+
+            <div class="que-text">
+                <span>
+                    What does HTML stand for?
+                </span>
+            </div>
+
+            <div class="option-list">
+
+                <div class="option">
+                    <span>
+                        1. Hyper Text Preprocessor
+                    </span>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
+                </div>
+
+                <div class="option">
+                    <span>
+                        2. Hyper Text Markup Language
+                    </span>
+                    <div class="icon tick"><i class="fas fa-check"></i></div>
+                </div>
+
+                <div class="option">
+                    <span>
+                        3. Hyper Text Multiple Language
+                    </span>
+                </div>
+
+                <div class="option">
+                    <span>
+                        4. Hyper Tool Markup Language
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+
+            <div class="total-que">
+                <span>
+                    <p>1</p>  &nbsp;  of &nbsp; <p>10</p>  &nbsp;  Questions
+                </span>
+            </div>
+            
+            <div class="buttons">
+                <button class="exit">Exit</button>
+                <button class="next">Next</button>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
 

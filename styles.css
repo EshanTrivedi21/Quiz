@@ -11,11 +11,11 @@ body {
     background: #2D0A1B;
 }
 
-.start-btn , .info-box{
+.start-btn , .info-box, .quiz-box{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -70%);
+    transform: translate(-50%, -65%);
 }
 
 .start-btn button {
@@ -43,7 +43,7 @@ body {
     transform: translateY(1px);
 }
 
-.info-box {
+.info-box, .quiz-box {
     width: 650px;
     background-color: #FBA490;
     border-radius: 5px;
@@ -51,36 +51,36 @@ body {
     box-shadow: 0px 4px 25px #000;
 }
 
-.info-box .info-title{
+.info-title, .title{
     text-transform: uppercase;
-    width: 100%;
+    width: 65%;
     padding: 30px 40px;
     display: flex;
     align-items: center;
-    font-size: 25px;
+    font-size: 28px;
     font-weight: 600;
 }
 
-.info-box .info-list{
+.info-list {
     padding: 15px 40px;
     font-size: 20px;
     font-weight: 500;
 }
 
-.info-box .info-list .info {
+.info {
     margin: 7.5px 0;
 }
 
-.info-box .buttons {
+.buttons {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 35px;
+    padding: 0 12.5px;
     margin: 10px;
     margin-bottom: 15px;
 }
 
-.info-box .buttons button {
+.buttons button {
     font-size: 17.5px;
     font-weight: 600;
     text-transform: uppercase;
@@ -97,20 +97,81 @@ body {
     cursor: pointer;
 }
 
-.info-box .buttons .quit {
+.buttons .quit {
     border: 2px solid #B83253;
 }
-.info-box .buttons .restart {
+
+.buttons .restart {
     border: 2px solid #B83253;
     background-color: #B83253;
 }
 
-.info-box .buttons button:hover {
+.buttons .exit {
+    border: 2px solid #B83253;
+}
+
+.buttons .next {
+    border: 2px solid #B83253;
+    background-color: #B83253;
+}
+
+.buttons button:hover {
     transform: translateY(-2.5px);
 }
 
-.info-box .buttons button:active {
+.buttons button:active {
     transform: translateY(1px);
+}
+
+.quiz-box header {
+    display: flex;
+    position: relative;
+    z-index: 100;
+}
+
+.quiz-box footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.timer {
+    padding: 40px 25px;
+    font-size: 17.5px;
+    font-weight: 600;
+    text-decoration: none;
+    color:#2D0A1B;
+    outline: none;
+}
+
+.timer span {
+    border-radius: 5px;
+    border: 6.5px solid #B83253;
+    background-color: #B83253;
+}
+
+.timer span span {
+    border: 1px solid #FBA490;
+    background-color: #FBA490;
+}
+
+.total-que span{
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-start;
+    padding: 25px 45px;
+    font-size: 17.5px;
+    font-weight: 600;
+}
+
+.que-text {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 40px;
+}
+
+.option-list {
+    font-size: 20px;
+    padding: 25px 40px;
 }
 
 .hidden {
