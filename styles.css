@@ -136,7 +136,7 @@ body {
     display: flex;
     position: relative;
     z-index: 100;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .quiz-box footer {
@@ -211,16 +211,6 @@ body {
     background-color: #d25c7a;
 }
 
-.icon {
-    height: 24px;
-    width: 24px;
-    font-size: 16.5px;
-    line-height: 24px;
-    border: 2px solid #B83253;
-    border-radius: 50%;
-    text-align: center;
-}
-
 .final-icon {
     font-size: 45px;
     line-height: 25px;
@@ -231,18 +221,6 @@ body {
     -webkit-background-clip: text;
     color: transparent;
     margin: 1.5rem;
-}
-
-.tick {
-    color: #23903c;
-    border-color: #23903c;
-    background: #23903c30;
-}
-
-.cross {
-    color: #a42834;
-    border-color: #a42834;
-    background: #a4283430;
 }
 
 .complete-text {
@@ -262,4 +240,173 @@ body {
 
 .hidden {
     display: none;
+}
+
+@media only screen and (max-width: 700px) {
+
+    .start-btn , .info-box, .quiz-box, .result-box{
+        top: 45%;
+    }
+
+    .start-btn button {
+        font-size: 30px;
+        padding: 15px 15px;
+    }
+
+    .info-box, .quiz-box, .result-box {
+        width: 92.5%;
+        padding: 2.5px;
+    }
+    
+    .info-title, .title, .complete-text{
+        width: 62.5%;
+        padding: 15px 15px;
+        font-size: 23.5px;
+    }
+
+    .info-title, .complete-text {
+        width: 100%;
+    }
+    
+    .info-list {
+        padding: 10px 17.5px;
+        font-size: 18px;
+    }
+    
+    .info {
+        margin: 5px 0;
+    }
+
+    .buttons {
+        padding: 0 10px;
+        margin: 5px;
+    }
+    
+    .buttons button {
+        padding: 3px 17.5px;
+        margin: 2.5px;
+    }
+    
+    .quiz-box footer {
+        display: block;
+    }
+
+    .timer {
+        padding: 17.5px 0px;
+        font-size: 15px;
+    }
+
+    .timer span {
+        border-radius: 3px;
+        border: 4px solid #B83253;
+    }
+
+    .total-que span{
+        padding: 10px 0px;
+        font-size: 17.5px;
+        justify-content: center;
+    }
+    
+    .que-text , .score-text{
+        font-size: 25px;
+        padding: 0px 30px;
+    }
+    
+    .option-list {
+        padding: 25px 20px;
+    }
+    
+    .option {
+        padding: 5px 15px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .complete-text {
+        padding: 0px 20px;
+    }
+    
+    .score-text {
+        font-size: 25px;
+        padding: 25px 25px;
+        letter-spacing: 1.5px;
+    }
+    
+    
+}
+
+@media only screen and (max-width: 400px) {
+    .start-btn , .info-box, .quiz-box, .result-box{
+        top: 47.5%;
+    }
+
+    .start-btn button {
+        font-size: 25px;
+    }
+
+    .info-title, .title, .complete-text{
+        width: 57.5%;
+        font-size: 21.25px;
+    }
+
+    .info-title, .complete-text {
+        width: 100%;
+    }
+
+    .que-text, .score-text{
+        font-size: 22.5px;
+        padding: 0px 15px;
+    }
+    
+    .option-list {
+        padding: 25px 3px;
+    }
+    
+    .option {
+        padding: 5px 15px;
+        margin-bottom: 10px;
+    }
+
+    .complete-text {
+        padding: 0px 10px;
+    }
+
+    .score-text {
+        font-size: 25px;
+        padding: 25px 25px;
+        letter-spacing: 1.5px;
+    }
+    
+}
+
+@media only screen and (max-width: 350px) {
+
+    .info-title, .title, .complete-text{
+        width: 50%;
+        font-size: 20px;
+    }
+
+    .info-title, .complete-text {
+        width: 100%;
+    }
+
+    .que-text , .score-text{
+        font-size: 20px;
+    }
+    
+    .option-list {
+        font-size: 17px;
+    }
+
+    .total-que span{
+        font-size: 15px;
+    }
+
+    .complete-text {
+        padding: 0px 5px;
+    }
+
+    .score-text {
+        font-size: 20px;
+    }
 }
