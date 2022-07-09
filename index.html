@@ -18,7 +18,7 @@
 
 <body>
 
-    <div class="start-btn hidden">
+    <div class="start-btn">
         <button>Start Quiz</button>
     </div>
 
@@ -65,30 +65,32 @@
 
             <div class="option-list">
 
-                <div class="option incorrect">
+                <div class="option">
                     <span>
                         Hyper Text Preprocessor
                     </span>
-                    <div class="icon cross"><i class="fas fa-times"></i></div>
+                    <div class="icon cross hidden"><i class="fas fa-times"></i></div>
                 </div>
 
-                <div class="option correct">
+                <div class="option">
                     <span>
                         Hyper Text Markup Language
                     </span>
-                    <div class="icon tick"><i class="fas fa-check"></i></div>
+                    <div class="icon tick hidden"><i class="fas fa-check"></i></div>
                 </div>
 
                 <div class="option">
                     <span>
                         Hyper Text Multiple Language
                     </span>
+                    <div class="icon cross hidden"><i class="fas fa-times"></i></div>
                 </div>
 
                 <div class="option">
                     <span>
                         Hyper Tool Markup Language
                     </span>
+                    <div class="icon cross hidden"><i class="fas fa-times"></i></div>
                 </div>
 
             </div>
@@ -109,6 +111,25 @@
             </div>
 
         </footer>
+
+    </div>
+
+    <div class="result-box hidden">
+
+        <div class="final-icon">
+            <i class="fas fa-crown"></i>
+        </div>
+
+        <div class="complete-text">You've completed the Quiz</div>
+
+        <div class="score-text">
+            <span>You scored 7 of 10</span>
+        </div>
+
+        <div class="buttons">
+            <button class="end">Quit</button>
+            <button class="replay">Replay</button>
+        </div>
 
     </div>
 

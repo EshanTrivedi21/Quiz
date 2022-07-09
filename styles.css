@@ -11,7 +11,7 @@ body {
     background: #2D0A1B;
 }
 
-.start-btn , .info-box, .quiz-box{
+.start-btn , .info-box, .quiz-box, .result-box{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -43,7 +43,7 @@ body {
     transform: translateY(1px);
 }
 
-.info-box, .quiz-box {
+.info-box, .quiz-box, .result-box {
     width: 650px;
     background-color: #FBA490;
     border-radius: 5px;
@@ -51,7 +51,7 @@ body {
     box-shadow: 0px 4px 25px #000;
 }
 
-.info-title, .title{
+.info-title, .title, .complete-text{
     text-transform: uppercase;
     width: 65%;
     padding: 30px 25px;
@@ -115,6 +115,15 @@ body {
     background-color: #B83253;
 }
 
+.buttons .end {
+    border: 2px solid #B83253;
+}
+
+.buttons .replay {
+    border: 2px solid #B83253;
+    background-color: #B83253;
+}
+
 .buttons button:hover {
     transform: translateY(-2.5px);
 }
@@ -163,7 +172,7 @@ body {
     font-weight: 600;
 }
 
-.que-text {
+.que-text , .score-text{
     font-size: 30px;
     font-weight: 600;
     padding: 0px 40px;
@@ -188,6 +197,16 @@ body {
     cursor: pointer;
 }
 
+.correct { 
+    border-color: #23903c;
+    background: #23903c30;
+}
+
+.incorrect {
+    border-color: #a42834;
+    background: #a4283430;
+}
+
 .option:hover {
     background-color: #d25c7a;
 }
@@ -202,6 +221,18 @@ body {
     text-align: center;
 }
 
+.final-icon {
+    font-size: 45px;
+    line-height: 25px;
+    display: block;
+    text-align: center;
+    background-image: linear-gradient(to right bottom, #2D0A1B, #a42834);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 1.5rem;
+}
+
 .tick {
     color: #23903c;
     border-color: #23903c;
@@ -212,6 +243,21 @@ body {
     color: #a42834;
     border-color: #a42834;
     background: #a4283430;
+}
+
+.complete-text {
+    width: 100%;
+    padding: 5px 25px;
+    justify-content: center;
+}
+
+.score-text {
+    display: flex;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 30px 25px;
+    letter-spacing: 2.5px;
+    justify-content: center;
 }
 
 .hidden {
