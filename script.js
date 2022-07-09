@@ -1,60 +1,31 @@
 "use-strict";
 
-const init = function() {
-    document.querySelector(".start-btn").classList.remove("hidden"); 
-    document.querySelector(".info-box").classList.add("hidden");
-    document.querySelector(".quiz-box").classList.add("hidden")
-    document.querySelector(".result-box").classList.add("hidden");
+const startButton = document.querySelector(".start-btn button");
+const infoBox = document.querySelector(".info-box");
+const quizBox = document.querySelector(".quiz-box")
+
+const quitButton = document.querySelector(".buttons .quit");
+const continueButton = document.querySelector(".buttons .restart");
+
+const questionText = document.querySelector(".que-text span");
+
+const option_1 = document.querySelector(".option_1 span");
+const option_2 = document.querySelector(".option_2 span");
+const option_3 = document.querySelector(".option_3 span");
+const option_4 = document.querySelector(".option_4 span");
+
+startButton.onclick = () => {
+    startButton.classList.add("hidden");
+    infoBox.classList.remove("hidden");
 }
 
-const startQuiz = function() {
-    document.querySelector(".start-btn").classList.add("hidden"); 
-    document.querySelector(".info-box").classList.remove("hidden");
+quitButton.onclick = () => {
+    infoBox.classList.add("hidden");
+    startButton.classList.remove("hidden");
 }
 
-const continueQuiz = function() {
-    document.querySelector(".info-box").classList.add("hidden");
-    document.querySelector(".quiz-box").classList.remove("hidden")
+continueButton.onclick = () => {
+    infoBox.classList.add("hidden");
+    startButton.classList.add("hidden");
+    quizBox.classList.remove("hidden")
 }
-
-const replayQuiz = function() {
-    document.querySelector(".start-btn").classList.add("hidden"); 
-    document.querySelector(".info-box").classList.remove("hidden");
-    document.querySelector(".quiz-box").classList.add("hidden")
-    document.querySelector(".result-box").classList.add("hidden");
-}
-
-const resultQuiz = function() {
-    document.querySelector(".quiz-box").classList.add("hidden")
-    document.querySelector(".result-box").classList.remove("hidden");
-}
-
-document.querySelector(".start-btn").addEventListener(
-    "click" , startQuiz
-)
-
-document.querySelector(".quit").addEventListener(
-    "click" , init
-)
-
-document.querySelector(".restart").addEventListener(
-    "click" , continueQuiz
-)
-
-document.querySelector(".exit").addEventListener(
-    "click" , init
-)
-
-document.querySelector(".next").addEventListener(
-    "click" , resultQuiz
-)
-
-
-document.querySelector(".end").addEventListener(
-    "click" , init
-)
-
-document.querySelector(".replay").addEventListener(
-    "click" , replayQuiz
-)
-
