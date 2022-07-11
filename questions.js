@@ -1,23 +1,23 @@
 "use-strict";
 
-fetch("https://the-trivia-api.com/api/questions?categories=general_knowledge&limit=10&region=IN&difficulty=easy")
+fetch("https://opentdb.com/api.php?amount=10&category=22&difficulty=easy&type=multiple")
 
     .then(res => {
         return res.json();
     })
 
     .then(loadedQuestions => {
-
-        loadedQuestions.map( loadedQuestion => {
+        console.log(loadedQuestions.results)
+        loadedQuestions.results.map( loadedQuestion => {
             const formattedQuestion = {
                 question: loadedQuestion.question
             };
 
-            const answerChoices = [...loadedQuestion.incorrectAnswers];
+            const answerChoices = [...loadedQuestion.incorrect_answers];
 
             formattedQuestion.answer = Math.floor(Math.random()*3) + 1;
     
-            answerChoices.splice(formattedQuestion.answer -1, 0, loadedQuestion.correctAnswer);
+            answerChoices.splice(formattedQuestion.answer -1, 0, loadedQuestion.correct_answer);
             
             answerChoices.forEach((choice, index) => {
                 formattedQuestion["choice" + (index + 1)] = choice;
