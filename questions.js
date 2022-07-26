@@ -1,23 +1,23 @@
 "use-strict";
 
-fetch("https://opentdb.com/api.php?amount=10&category=22&difficulty=easy&type=multiple")
+fetch("https://the-trivia-api.com/api/questions?categories=science,geography,history,sport_and_leisure&limit=10&region=IN&difficulty=easy")
 
     .then(res => {
         return res.json();
     })
 
     .then(loadedQuestions => {
-        console.log(loadedQuestions.results)
-        loadedQuestions.results.map( loadedQuestion => {
+        console.log(loadedQuestions)
+        loadedQuestions.map(loadedQuestion => {
             const formattedQuestion = {
                 question: loadedQuestion.question
             };
 
-            const answerChoices = [...loadedQuestion.incorrect_answers];
+            const answerChoices = [...loadedQuestion.incorrectAnswers];
 
             formattedQuestion.answer = Math.floor(Math.random()*3) + 1;
     
-            answerChoices.splice(formattedQuestion.answer -1, 0, loadedQuestion.correct_answer);
+            answerChoices.splice(formattedQuestion.answer -1, 0, loadedQuestion.correctAnswer);
             
             answerChoices.forEach((choice, index) => {
                 formattedQuestion["choice" + (index + 1)] = choice;
