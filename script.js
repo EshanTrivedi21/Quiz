@@ -7,6 +7,9 @@ const quizBox = document.querySelector(".quiz-box")
 const quitButton = document.querySelector(".buttons .quit");
 const continueButton = document.querySelector(".buttons .restart");
 
+const exitButton = document.querySelector(".buttons .exit");
+const nextButton = document.querySelector(".buttons .next");
+
 const questionText = document.querySelector(".que-text span");
 
 const option_1 = document.querySelector(".option_1 span");
@@ -28,4 +31,14 @@ continueButton.onclick = () => {
     infoBox.classList.add("hidden");
     startButton.classList.add("hidden");
     quizBox.classList.remove("hidden")
+}
+
+exitButton.onclick = () => {
+    infoBox.classList.add("hidden");
+    quizBox.classList.add("hidden")
+    startButton.classList.remove("hidden");
+}
+
+nextButton.onclick = () => {
+
 }
